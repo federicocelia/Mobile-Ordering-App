@@ -1,3 +1,55 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-    margin: 0;
-} 
+  margin: 0;
+}
+
+/* =========================================================
+   Header & Footer (Global)
+   ========================================================= */
+
+header,
+footer {
+  background-color: #171616;
+  color: rgb(254, 250, 245);
+  padding-block: 1rem;
+  text-align: center;
+}
+
+/* =========================================================
+   Footer Content
+   ========================================================= */
+
+.site-footer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer-title,
+.author,
+.social-icon {
+  margin-bottom: 0.5rem;
+}
+
+.social-icon {
+  fill: rgb(254, 250, 245);
+  max-width: 50px;
+}
+
+.author a {
+  color: rgb(254, 250, 245);
+}
+
+.author a:hover,
+.author a:visited,
+.author a:focus,
+.author a:active {
+  color: rgb(231, 205, 76);
+}
+
+.social-icon:hover {
+  fill: rgb(231, 205, 76);
+}

@@ -20,6 +20,20 @@ main {
   padding-inline: 3rem;
 }
 
+.menu-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item-container {
+  display: flex;
+}
+
+button {
+  display: inline;
+}
+
 /* =========================================================
    Header & Footer (Global)
    ========================================================= */

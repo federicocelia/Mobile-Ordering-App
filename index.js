@@ -31,6 +31,8 @@ const orderHtml = () => {
         
             `;
   });
+  orderHtml += `<p>Total Price: $${order.reduce((sum, item) => sum + item.price * item.quantity, 0).toFixed(2)}</p>
+  <button class="complete-order-btn">Complete Order</button>`;
   return orderHtml;
 };
 

@@ -1,7 +1,5 @@
 import { menuArray } from "./data.js";
 
-//console.log(menuArray);
-
 const menuContainer = document.querySelector(".menu-selection");
 const orderContainer = document.querySelector(".order-summary");
 const paymentContainer = document.querySelector(".payment-modal");
@@ -36,38 +34,53 @@ const orderHtml = () => {
   return orderHtml;
 };
 
-const render = () => {
+const renderMenu = () => {
   menuContainer.innerHTML = menuHtml();
-
-  const orderBtn = document.querySelectorAll(".add-to-order-btn");
-
-  orderBtn.forEach((btn) => {
-    btn.addEventListener("click", (event) => {
-      const itemId = Number(event.currentTarget.parentElement.dataset.itemId);
-
-      const itemToAdd = menuArray.find((item) => {
-        return item.id === itemId;
-      });
-
-      const existingItem = order.find((item) => item.id === itemToAdd.id);
-
-      if (!existingItem) {
-        order.push({ ...itemToAdd, quantity: 1 });
-      } else {
-        existingItem.quantity += 1;
-      }
-
-      orderContainer.innerHTML = orderHtml();
-
-      const removeItemBtn = document.querySelectorAll(".remove-item");
-
-      removeItemBtn.forEach((btn) => {
-        btn.addEventListener("click", (event) => {
-          event.currentTarget.parentElement.remove();
-        });
-      });
-    });
-  });
 };
 
-render();
+const renderOrder = () => {
+  orderContainer.innerHTML = orderHtml();
+};
+
+menuContainer.addEventListener("click", (event) => {
+  console.log(event.target);
+  if (!event.target.classList.contains("add-to-order-btn")) return;
+
+  const itemId = parseInt(
+    event.target.closest(".item-container").dataset.itemId,
+  );
+  console.log(itemId);
+
+  const itemToAdd = menuArray.find((item) => {
+    return item.id === itemId;
+  });
+
+  const existingItem = order.find((item) => item.id === itemToAdd.id);
+
+  if (!existingItem) {
+    order.push({ ...itemToAdd, quantity: 1 });
+  } else {
+    existingItem.quantity += 1;
+  }
+
+  renderOrder();
+});
+
+orderContainer.addEventListener("click", (event) => {
+  const removeBtn = event.target.closest(".remove-item");
+  if (!removeBtn) return;
+
+  const row = removeBtn.closest("p");
+  const itemId = Number(row.dataset.itemId);
+
+  // remove from the array
+  const index = order.findIndex((item) => item.id === itemId);
+  if (index !== -1) {
+    order.splice(index, 1);
+  }
+
+  // re-render UI
+  renderOrder();
+});
+
+renderMenu();

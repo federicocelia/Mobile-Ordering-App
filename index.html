@@ -1,18 +1,61 @@
-<html>
+<!doctype html>
+<html lang="en">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Smythe&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
     <main>
       <header class="header">
-        <h1 id="brand-name">Fede's Burger</h1>
-        <p id="brand-motto">The Best Burgers & Pizza in Town</p>
+        <div class="container">
+          <h1 id="brand-name">Fede's Burger</h1>
+          <p id="brand-motto">The Best Burgers & Pizza in Town</p>
+        </div>
       </header>
-      <section class="menu-selection"></section>
+      <section class="menu-selection">
+        <div class="menu-item">
+          <div class="item-emoji">🍕</div>
+          <div class="item-details">
+            <h3 class="item-name">Pizza</h3>
+            <p class="item-ingredients">peperoni, mushrom, mozarella</p>
+            <p class="item-price">$14</p>
+          </div>
+          <div class="button-wrapper">
+            <button class="add-item">+</button>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-emoji">🍕</div>
+          <div class="item-details">
+            <h3 class="item-name">Pizza</h3>
+            <p class="item-ingredients">peperoni, mushrom, mozarella</p>
+            <p class="item-price">$14</p>
+          </div>
+          <div class="button-wrapper">
+            <button class="add-item">+</button>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-emoji">🍕</div>
+          <div class="item-details">
+            <h3 class="item-name">Pizza</h3>
+            <p class="item-ingredients">peperoni, mushrom, mozarella</p>
+            <p class="item-price">$14</p>
+          </div>
+          <div class="button-wrapper">
+            <button class="add-item">+</button>
+          </div>
+        </div>
+      </section>
       <section class="order-summary"></section>
       <section class="payment-modal hidden"></section>
     </main>
-    <footer class="site-footer">
+    <footer class="site-footer wrapper">
       <h2 class="footer-title">Fede's Burger</h2>
       <p class="author">
         Crafted with ❤️ by

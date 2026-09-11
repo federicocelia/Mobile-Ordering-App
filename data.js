@@ -5,6 +5,7 @@ export const menuArray = [
     ingredients: ["beef", "cheese", "lettuce"],
     price: 12,
     emoji: "🍔",
+    category: "main",
     id: 0,
   },
   {
@@ -12,6 +13,7 @@ export const menuArray = [
     ingredients: ["pepperoni", "mushroom", "mozzarella"],
     price: 14,
     emoji: "🍕",
+    category: "main",
     id: 1,
   },
   {
@@ -19,6 +21,7 @@ export const menuArray = [
     ingredients: ["sausage", "bun", "mustard"],
     price: 8,
     emoji: "🌭",
+    category: "main",
     id: 2,
   },
   {
@@ -26,6 +29,7 @@ export const menuArray = [
     ingredients: ["beef", "lettuce", "cheese"],
     price: 10,
     emoji: "🌮",
+    category: "main",
     id: 3,
   },
   {
@@ -33,6 +37,7 @@ export const menuArray = [
     ingredients: ["rice", "beans", "chicken"],
     price: 13,
     emoji: "🌯",
+    category: "main",
     id: 4,
   },
   {
@@ -40,6 +45,7 @@ export const menuArray = [
     ingredients: ["ham", "cheese", "tomato"],
     price: 9,
     emoji: "🥪",
+    category: "main",
     id: 5,
   },
   {
@@ -47,6 +53,7 @@ export const menuArray = [
     ingredients: ["pasta", "tomato sauce", "parmesan"],
     price: 15,
     emoji: "🍝",
+    category: "main",
     id: 6,
   },
   {
@@ -54,6 +61,7 @@ export const menuArray = [
     ingredients: ["chicken", "flour", "seasoning"],
     price: 14,
     emoji: "🍗",
+    category: "main",
     id: 7,
   },
   {
@@ -61,13 +69,15 @@ export const menuArray = [
     ingredients: ["beef", "butter", "herbs"],
     price: 24,
     emoji: "🥩",
+    category: "main",
     id: 8,
   },
   {
     name: "Salad",
     ingredients: ["lettuce", "tomato", "cucumber"],
-    price: 11,
+    price: 8,
     emoji: "🥗",
+    category: "side",
     id: 9,
   },
 
@@ -77,6 +87,7 @@ export const menuArray = [
     ingredients: ["potatoes", "salt", "oil"],
     price: 6,
     emoji: "🍟",
+    category: "side",
     id: 10,
   },
 
@@ -86,6 +97,7 @@ export const menuArray = [
     ingredients: ["milk", "sugar", "vanilla"],
     price: 7,
     emoji: "🍨",
+    category: "dessert",
     id: 11,
   },
   {
@@ -93,6 +105,7 @@ export const menuArray = [
     ingredients: ["flour", "sugar", "glaze"],
     price: 4,
     emoji: "🍩",
+    category: "dessert",
     id: 12,
   },
 
@@ -102,6 +115,7 @@ export const menuArray = [
     ingredients: ["spring water"],
     price: 2,
     emoji: "💧",
+    category: "drink",
     id: 13,
   },
   {
@@ -109,6 +123,7 @@ export const menuArray = [
     ingredients: ["carbonated water", "sugar", "flavoring"],
     price: 3,
     emoji: "🍹",
+    category: "drink",
     id: 14,
   },
   {
@@ -116,6 +131,7 @@ export const menuArray = [
     ingredients: ["coffee beans", "water"],
     price: 3,
     emoji: "☕",
+    category: "drink",
     id: 15,
   },
   {
@@ -123,6 +139,7 @@ export const menuArray = [
     ingredients: ["milk", "ice cream", "syrup"],
     price: 8,
     emoji: "🥤",
+    category: "drink",
     id: 16,
   },
   {
@@ -130,6 +147,7 @@ export const menuArray = [
     ingredients: ["grain", "hops", "yeast", "water"],
     price: 5,
     emoji: "🍺",
+    category: "drink",
     id: 17,
   },
 ];

@@ -1,7 +1,9 @@
 import { menuArray } from "./data.js";
+import { updateViewOrderButton } from "./viewOrder.js";
 
 const menuSection = document.querySelector(".menu-selection");
 const orderSection = document.querySelector(".order-summary");
+const viewOrderBtn = document.querySelector(".view-order-btn");
 
 export const order = {}; //starting with and empty order
 
@@ -30,6 +32,7 @@ export function addToOrder() {
     }
 
     orderSection.innerHTML = renderOrder();
+    updateViewOrderButton(order);
   });
 }
 
@@ -47,6 +50,7 @@ export function setupRemoveItemListener() {
       delete order[id]; //deleting the correspondent order
 
       orderSection.innerHTML = renderOrder(); //rerender to update the order HTML
+      updateViewOrderButton(order);
       return; //exist the click handler
     }
 
@@ -65,6 +69,7 @@ export function setupRemoveItemListener() {
       }
 
       orderSection.innerHTML = renderOrder();
+      updateViewOrderButton(order);
     }
   });
 }

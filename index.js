@@ -1,8 +1,10 @@
 import { menuArray } from "./data.js";
 import { addToOrder, setupRemoveItemListener } from "./order.js";
 import "./checkout.js";
+import { setupViewOrderScroll } from "./viewOrder.js";
 
 const menuSection = document.querySelector(".menu-selection");
+const orderSection = document.querySelector(".order-summary");
 
 const menuCategories = [...new Set(menuArray.map((item) => item.category))];
 
@@ -42,3 +44,4 @@ menuSection.innerHTML = menuHtml;
 
 addToOrder();
 setupRemoveItemListener();
+setupViewOrderScroll(orderSection);

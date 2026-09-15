@@ -6,6 +6,9 @@ const orderSection = document.querySelector(".order-summary");
 const viewOrderBtn = document.querySelector(".view-order-btn");
 
 export const order = {}; //starting with and empty order
+export function resetOrder(order) {
+  Object.keys(order).forEach((key) => delete order[key]);
+}
 
 // Add items to Order
 export function addToOrder() {

@@ -425,6 +425,25 @@ header {
 .pay-btn:active {
   color: black;
 }
+
+/* =========================================================
+Checkout message
+============================================================ */
+.checkout-confirmation-message {
+  width: 90%;
+  margin: 1rem auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #90ee9052;
+}
+
+.checkout-confirmation-message p {
+  font-size: 2rem;
+  margin: 2rem auto;
+}
+
 /* =========================================================
    Footer Content
    ========================================================= */

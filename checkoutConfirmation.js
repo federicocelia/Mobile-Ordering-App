@@ -1,3 +1,6 @@
+import { order, resetOrder } from "./order.js";
+import { updateViewOrderButton } from "./viewOrder.js";
+
 export function checkoutChecker(event) {
   event.preventDefault();
 
@@ -5,6 +8,8 @@ export function checkoutChecker(event) {
   const formData = new FormData(form);
 
   const customerName = formData.get("customer-name");
+  resetOrder(order);
+  updateViewOrderButton(order);
 
   return `
     <div class="checkout-confirmation-message">
